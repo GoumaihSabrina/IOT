@@ -39,6 +39,10 @@ $data2 = getWeatherData($city2);
             <div class="value">NO₂: <?= round($d['current']['air_quality']['no2'], 1) ?></div>
             <div class="value">O₃: <?= round($d['current']['air_quality']['o3'], 1) ?></div>
         </div>
+
+        <div class="section">
+            <a href="storico.php?città=<?= urlencode($d['location']['name']) ?>" class="button">Visualizza Storico</a>
+        </div>
     </div>
 <?php endforeach; ?>
 
