@@ -1,4 +1,4 @@
 <?php
 // Sostituisci con la tua chiave API di WeatherAPI
-define('WEATHER_API_KEY', 'LA_TUA_API_KEY');
+define('b625a7c2e2bc4f208f555826252105 ', 'b625a7c2e2bc4f208f555826252105 ');
 ?>
