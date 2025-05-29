@@ -50,6 +50,8 @@ $meseResponse = file_get_contents($meseUrl);
     <button type="submit">Mostra dati</button>
   </form>
 
+  <a href="index.php" class="button">Torna alla Home</a>
+
   <hr>
 
   <?php
@@ -69,7 +71,6 @@ $meseResponse = file_get_contents($meseUrl);
       echo "<p>Errore nel recupero dei dati giornalieri per $citta.</p>";
   }
 
-  // --- Prepara dati per grafici ---
   $labels = [];
   $tempMax = [];
   $tempMin = [];
@@ -131,5 +132,8 @@ $meseResponse = file_get_contents($meseUrl);
       }
     });
   </script>
+
+  <a href="index.php" class="button">Torna alla Home</a>
+
 </body>
 </html>

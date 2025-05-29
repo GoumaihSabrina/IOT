@@ -17,6 +17,8 @@ $data2 = getWeatherData($city2);
 </head>
 <body>
 
+<h2>Dashboard Meteo</h2>
+
 <?php foreach ([['data' => $data1, 'label' => 'Vicenza'], ['data' => $data2, 'label' => 'Bolzano']] as $cityInfo): 
     $d = $cityInfo['data'];
     if (!$d) continue;
@@ -45,6 +47,10 @@ $data2 = getWeatherData($city2);
         </div>
     </div>
 <?php endforeach; ?>
+
+<div style="text-align:center; margin-top: 30px;">
+    <a href="previsione.php" class="button">Vai alla Previsione IA</a>
+</div>
 
 </body>
 </html>
