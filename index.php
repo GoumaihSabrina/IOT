@@ -14,6 +14,20 @@ $data2 = getWeatherData($city2);
     <meta charset="UTF-8">
     <title>Dashboard Meteo</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .button {
+            background-color: #007acc;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #005f99;
+        }
+    </style>
 </head>
 <body>
 
@@ -49,7 +63,7 @@ $data2 = getWeatherData($city2);
 <?php endforeach; ?>
 
 <div style="text-align:center; margin-top: 30px;">
-    <a href="previsione.php" class="button">Vai alla Previsione IA</a>
+    <a href="previsioni_ai.php" class="button">Vai alla Previsione IA</a>
 </div>
 
 </body>

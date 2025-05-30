@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Mag 21, 2025 alle 08:19
--- Versione del server: 10.4.28-MariaDB
--- Versione PHP: 8.2.4
+-- Creato il: Mag 30, 2025 alle 21:36
+-- Versione del server: 10.4.32-MariaDB
+-- Versione PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,24 @@ SET time_zone = "+00:00";
 --
 -- Database: `iot_ambiente`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `previsioni`
+--
+
+CREATE TABLE `previsioni` (
+  `id` int(11) NOT NULL,
+  `citta` varchar(100) DEFAULT NULL,
+  `data_previsione` date DEFAULT NULL,
+  `temperatura_prevista` decimal(5,2) DEFAULT NULL,
+  `temperatura_attuale` decimal(5,2) DEFAULT NULL,
+  `umidita` decimal(5,2) DEFAULT NULL,
+  `pm25` decimal(5,2) DEFAULT NULL,
+  `pm10` decimal(5,2) DEFAULT NULL,
+  `timestamp` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -40,6 +58,12 @@ CREATE TABLE `rilevazioni` (
 --
 
 --
+-- Indici per le tabelle `previsioni`
+--
+ALTER TABLE `previsioni`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indici per le tabelle `rilevazioni`
 --
 ALTER TABLE `rilevazioni`
@@ -48,6 +72,12 @@ ALTER TABLE `rilevazioni`
 --
 -- AUTO_INCREMENT per le tabelle scaricate
 --
+
+--
+-- AUTO_INCREMENT per la tabella `previsioni`
+--
+ALTER TABLE `previsioni`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `rilevazioni`
